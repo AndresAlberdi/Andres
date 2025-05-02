@@ -1,13 +1,9 @@
-# Andres
-Repositorio Base de Andrés
+# DimZ
+Repositorio Basel Proyecto Dimensiones en Z
 
-## Sobre mi
-Matemático, conferencista, gerente, padre de 2, metalero, kung fu, con mucha experiencia en diferentes áreas tecnológicas y de sistemas, con la pendiente negativa en la curva de la vida y en etapa de dar lo recibido.
+## Resumen conciso
+Reformular la Geometría Axiomática básica con la Teoría de Conglomerados, a partir de la Teoría de Conjuntos ZFC.
 
-## Principales proyectos
-- Reformular la Geometría Axiomática básica con la Teoría de Conglomerados.
-- Aprender sobre ciencia y filosofía, sobre todo Física y Matemática, con Platonismo, Estoicismo, Racionalidad y Pragmatismo, divulgando.
-- Hacer práctica mi experiencia pasada, intentando llegar a mi ikigai.
-
-## Porqué Github
-No solamente porque fue una tarea encomendada en el AWS Restart, sino por curiosidad, saber cómo efectivamente funciona y si es conveniente para mis objetivos.
+## Breve historia
+En 1991 inicié esta cruzada con la pregunta "Pueden definirse dimensiones negativas?"
+En 2017 armé la Teoría de Conglomerados, a partir de los Axiomas de la Geometría de Hilbert (1900).
