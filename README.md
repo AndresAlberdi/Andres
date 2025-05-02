@@ -1,5 +1,5 @@
-# Código Python
-Repositorio Base de Código en Python
+# Código Python para AWS Restart
+Repositorio Base de Código en Python para WAWS Restart
 
 ## Principal motivo
-Pasando el curso de AWS Restart pondré los proyectos iniciales aquí. Pero no solamente ellos, también los que puedan venir.
+Pasando el curso de AWS Restart pondré los proyectos iniciales aquí.
