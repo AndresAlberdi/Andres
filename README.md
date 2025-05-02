@@ -1,5 +1,5 @@
-# DimZ
-Repositorio Basel Proyecto Dimensiones en Z
+ # DimZ
+Repositorio Base del Proyecto Dimensiones en Z
 
 ## Resumen conciso
 Reformular la Geometría Axiomática básica con la Teoría de Conglomerados, a partir de la Teoría de Conjuntos ZFC.
