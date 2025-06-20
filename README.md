@@ -2,7 +2,7 @@
 Repositorio Base de Andrés
 
 ## Sobre mi
-Matemático, conferencista, gerente, padre de 2, metalero, kung fu, con mucha experiencia en diferentes áreas tecnológicas y de sistemas, con la pendiente negativa en la curva de la vida y en etapa de dar lo recibido.
+Matemático, conferencista, gerente, padre de 2, metalero, kung fu, con mucha experiencia en diferentes áreas tecnológicas y de sistemas, con pendiente <0 en la curva de la vida y en etapa de dar lo recibido.
 
 ## Principales proyectos
 - Reformular la Geometría Axiomática básica con la Teoría de Conglomerados.
