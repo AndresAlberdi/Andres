@@ -1,13 +1,8 @@
-# Andres
-Repositorio Base de Andrés
+# Proyecto Isabelle & Ferdinand
+Repositorio del Proyecto Isabelle and Ferdinand
 
-## Sobre mi
-Matemático, conferencista, gerente, padre de 2, metalero, kung fu, con mucha experiencia en diferentes áreas tecnológicas y de sistemas, con pendiente <0 en la curva de la vida y en etapa de dar lo recibido.
+## Sobre Isabelle and Ferdinand
+Denominada como "IF", es un centro educativo de idiomas que se encuentra en Washington DC, especializado en enseñanza del idioma Español. Cuenta con cursos presenciales y virtuales, además de profesores espoecializados tanto en Estados Unidos como en diferentes países de Latinoamérica. Su principal alianza es con el Instituto Cervantes.
 
-## Principales proyectos
-- Reformular la Geometría Axiomática básica con la Teoría de Conglomerados.
-- Aprender sobre ciencia y filosofía, sobre todo Física y Matemática, con Platonismo, Estoicismo, Racionalidad y Pragmatismo, divulgando.
-- Hacer práctica mi experiencia pasada, intentando llegar a mi ikigai.
-
-## Porqué Github
-No solamente porque fue una tarea encomendada en el AWS Restart, sino por curiosidad, saber cómo efectivamente funciona y si es conveniente para mis objetivos.
+## Sobre el Proyecto
+Se trata de un Proyecto de transformación digital de IF, usando la herramienta Moodle como base y funcionando sobre AWS.
