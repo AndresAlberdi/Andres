@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodle on AWS | Recommendations for Language Schools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #0079C2, #00AEEF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#F0F4F8]">
+
+<!-- 
+    Infographic Plan Summary:
+    Narrative & Structure:
+    1.  Header: Introduce the solution - Moodle on AWS for language education.
+    2.  Core Architecture: A visual diagram of the AWS services working together.
+    3.  Pillars of Success: Sections detailing Scalability, Security, Cost, and Compliance.
+    4.  Feature Roadmap: A step-by-step implementation plan for the school's specific needs.
+    5.  Conclusion: Recap of benefits and call to action.
+
+    Visualization Choices:
+    -   Architecture Diagram: Goal: Organize. Viz: HTML/CSS Flow Chart. Justification: Clear, non-SVG/Mermaid representation of service interaction.
+    -   Scalability Trend: Goal: Change. Viz: Chart.js Line Chart. Justification: Shows how resources adapt to user load over time.
+    -   Cost Breakdown: Goal: Compare. Viz: Chart.js Donut Chart. Justification: Shows cost proportions clearly.
+    -   Security Focus: Goal: Compare. Viz: Chart.js Donut Chart. Justification: Highlights areas of security investment.
+    -   Feature Roadmap: Goal: Organize. Viz: HTML/CSS Timeline. Justification: A clear, step-by-step process flow.
+    -   KPIs: Goal: Inform. Viz: Large text numbers. Justification: High-impact display for key metrics.
+
+    Color Palette: "Brilliant Blues" (#004AAD, #0079C2, #00AEEF, #9DD9F3) with a neutral background (#F0F4F8).
+
+    Confirmation: NEITHER Mermaid JS NOR SVG were used in this output. All diagrams are created with structured HTML and Tailwind CSS. All charts are rendered on Canvas elements by Chart.js.
+-->
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#004AAD] mb-2">Optimizing Moodle on AWS</h1>
+            <p class="text-xl md:text-2xl font-semibold gradient-text">A Strategic Blueprint for Your Washington D.C. Language School</p>
+            <p class="mt-4 max-w-3xl mx-auto text-gray-600">
+                This guide outlines a scalable, secure, and cost-effective cloud architecture designed to support your unique blend of virtual and in-person classes, complex tracking needs, and future growth.
+            </p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Architecture Diagram Section (Full Width) -->
+            <section class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">Recommended High-Availability Architecture</h2>
+                 <p class="text-gray-600 mb-6">
+                    This architecture ensures your Moodle platform is always available, performs optimally even during peak usage (like enrollment periods), and keeps student data secure. It is designed to scale automatically, meaning you only pay for the resources you actually use.
+                </p>
+                <div class="border-2 border-dashed border-[#9DD9F3] rounded-lg p-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="text-center">
+                            <div class="text-4xl">👨‍🏫👩‍🎓</div>
+                            <div class="font-bold text-gray-700">Users</div>
+                            <p class="text-sm text-gray-500">(Students, Teachers, Parents, Admins)</p>
+                        </div>
+
+                        <div class="text-3xl font-bold text-[#00AEEF] self-center">&rarr;</div>
+
+                        <div class="text-center p-3 bg-[#F0F4F8] rounded-lg">
+                             <div class="font-bold text-[#0079C2]">AWS CloudFront (CDN)</div>
+                             <p class="text-sm text-gray-500">Fast Global Content Delivery</p>
+                        </div>
+                        
+                        <div class="text-3xl font-bold text-[#00AEEF] self-center">&rarr;</div>
+
+                        <div class="flex-grow p-4 border-2 border-[#0079C2] rounded-lg bg-white">
+                            <h3 class="font-bold text-center text-[#004AAD] mb-3">Your Virtual Private Cloud (VPC)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-[#9DD9F3] bg-opacity-30 p-3 rounded text-center">
+                                    <h4 class="font-semibold text-[#004AAD]">Auto Scaling Group</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Scales servers based on demand</p>
+                                    <div class="bg-white p-2 rounded shadow-inner">
+                                        <span class="text-2xl">💻</span> EC2 Instances (Moodle App)
+                                    </div>
+                                </div>
+                                <div class="bg-[#9DD9F3] bg-opacity-30 p-3 rounded text-center">
+                                    <h4 class="font-semibold text-[#004AAD]">Managed Services</h4>
+                                    <p class="text-sm text-gray-600 mb-2">For Performance & Data</p>
+                                    <div class="space-y-2">
+                                        <div class="bg-white p-2 rounded shadow-inner"><span class="text-2xl">🗃️</span> Amazon RDS (Database)</div>
+                                        <div class="bg-white p-2 rounded shadow-inner"><span class="text-2xl">📦</span> Amazon S3 (File Storage)</div>
+                                        <div class="bg-white p-2 rounded shadow-inner"><span class="text-2xl">⚡️</span> ElastiCache (Caching)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pillar 1: Scalability & Performance -->
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-[#004AAD] mb-4">🚀 Scalability & Performance</h3>
+                <p class="text-gray-600 mb-6">
+                    Handle any number of concurrent users, from quiet holiday periods to peak enrollment seasons, without performance degradation. The system automatically adds resources when needed and removes them to save costs, ensuring a smooth experience for all users.
+                </p>
+                <div class="chart-container">
+                    <canvas id="scalabilityChart"></canvas>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-2">Server capacity dynamically adjusts to match user activity.</p>
+            </section>
+
+            <!-- Pillar 2: Security & Compliance -->
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-[#004AAD] mb-4">🛡️ Security & Compliance</h3>
+                <p class="text-gray-600 mb-6">
+                    With students, especially minors, using the platform, security is paramount. This architecture provides multiple layers of protection and helps you meet compliance standards like FERPA by encrypting data and isolating your network.
+                </p>
+                <div class="chart-container">
+                    <canvas id="securityChart"></canvas>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-2">Security efforts are balanced across all critical areas.</p>
+            </section>
+
+            <!-- Pillar 3: Cost Optimization -->
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-[#004AAD] mb-4">💰 Cost Optimization</h3>
+                <p class="text-gray-600 mb-6">
+                   An AWS solution is not only powerful but also cost-effective. You pay only for what you use, and services like Auto Scaling prevent over-provisioning. The chart below shows a typical cost distribution for a mid-sized Moodle deployment.
+                </p>
+                <div class="chart-container h-80">
+                    <canvas id="costChart"></canvas>
+                </div>
+                 <p class="text-center text-sm text-gray-500 mt-2">Estimated monthly cost distribution.</p>
+            </section>
+
+            <!-- Pillar 4: Feature Enablement -->
+             <section class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-[#004AAD] mb-4">🧩 Key Feature Enablement</h3>
+                <p class="text-gray-600 mb-6">
+                   The combination of Moodle and AWS directly addresses your school's specific needs. Here’s how the core requirements are met through this powerful platform:
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-3 mt-1">✔</span>
+                        <div><strong class="text-gray-800">Payments & Enrollment:</strong> Moodle's Stripe plugin integrates seamlessly for payment processing, linked directly to course enrollment.</div>
+                    </li>
+                     <li class="flex items-start">
+                        <span class="text-blue-500 mr-3 mt-1">✔</span>
+                        <div><strong class="text-gray-800">Parent Notifications:</strong> Use Amazon SES for reliable, high-volume email delivery of Moodle's automated notifications and forum digests to parents.</div>
+                    </li>
+                     <li class="flex items-start">
+                        <span class="text-blue-500 mr-3 mt-1">✔</span>
+                        <div><strong class="text-gray-800">Minor Student Tracking:</strong> Utilize Moodle's custom user profile fields and cohort management to tag and monitor underage students, with strict permission schemes to protect their privacy.</div>
+                    </li>
+                     <li class="flex items-start">
+                        <span class="text-blue-500 mr-3 mt-1">✔</span>
+                        <div><strong class="text-gray-800">AVE Cervantes Integration:</strong> Moodle’s native SCORM module allows for straightforward integration of third-party content packages like those from AVE Cervantes.</div>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Implementation Roadmap (Full Width) -->
+            <section class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">Implementation Roadmap</h2>
+                <p class="text-gray-600 mb-6">
+                    A phased approach ensures a smooth transition and successful launch. We recommend the following steps to build and customize your platform, from foundational architecture to full feature integration.
+                </p>
+                <div class="relative w-full">
+                    <!-- The line -->
+                    <div class="absolute left-1/2 top-0 h-full w-0.5 bg-[#9DD9F3] -ml-px"></div>
+
+                    <!-- Step 1 -->
+                    <div class="relative mb-8 flex justify-between items-center w-full">
+                        <div class="w-2/5 pr-8 text-right">
+                            <h4 class="font-bold text-[#0079C2]">Phase 1: Foundation</h4>
+                            <p class="text-sm text-gray-600">Deploy core AWS architecture: VPC, RDS, S3, and initial EC2 instances.</p>
+                        </div>
+                        <div class="absolute left-1/2 -ml-4 z-10 bg-[#0079C2] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+                        <div class="w-2/5"></div>
+                    </div>
+                     <!-- Step 2 -->
+                    <div class="relative mb-8 flex justify-between items-center w-full">
+                        <div class="w-2/5"></div>
+                        <div class="absolute left-1/2 -ml-4 z-10 bg-[#0079C2] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+                        <div class="w-2/5 pl-8 text-left">
+                            <h4 class="font-bold text-[#0079C2]">Phase 2: Moodle & Plugins</h4>
+                            <p class="text-sm text-gray-600">Install Moodle. Configure Stripe payment gateway and essential reporting plugins.</p>
+                        </div>
+                    </div>
+                     <!-- Step 3 -->
+                    <div class="relative mb-8 flex justify-between items-center w-full">
+                        <div class="w-2/5 pr-8 text-right">
+                            <h4 class="font-bold text-[#0079C2]">Phase 3: Customization</h4>
+                            <p class="text-sm text-gray-600">Define custom roles for parents. Set up profiles and cohorts for minor student tracking. Configure notification systems.</p>
+                        </div>
+                        <div class="absolute left-1/2 -ml-4 z-10 bg-[#0079C2] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+                        <div class="w-2/5"></div>
+                    </div>
+                     <!-- Step 4 -->
+                    <div class="relative flex justify-between items-center w-full">
+                         <div class="w-2/5"></div>
+                        <div class="absolute left-1/2 -ml-4 z-10 bg-[#0079C2] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
+                        <div class="w-2/5 pl-8 text-left">
+                            <h4 class="font-bold text-[#0079C2]">Phase 4: Integration & Go-Live</h4>
+                            <p class="text-sm text-gray-600">Load AVE Cervantes SCORM packages. Conduct final testing and launch. Implement CloudWatch monitoring dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="text-center p-8 mt-8 border-t border-gray-300">
+        <p class="text-gray-600">This infographic provides a high-level strategic recommendation.</p>
+        <p class="text-sm text-gray-500">A detailed analysis is required for precise cost estimation and implementation timelines.</p>
+    </footer>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#004AAD',
+            medium: '#0079C2',
+            light: '#00AEEF',
+            pale: '#9DD9F3',
+            background: '#F0F4F8'
+        };
+
+        const tooltipPlugin = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                          return label.join(' ');
+                        } else {
+                          return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        function processLabel(label) {
+            const maxLength = 16;
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+
+        // Scalability Chart
+        const scalabilityCtx = document.getElementById('scalabilityChart').getContext('2d');
+        new Chart(scalabilityCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Concurrent Users',
+                    data: [120, 150, 450, 500, 300, 90, 110],
+                    borderColor: brilliantBlues.medium,
+                    backgroundColor: 'rgba(0, 121, 194, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Server Capacity (%)',
+                    data: [30, 40, 90, 100, 70, 25, 30],
+                    borderColor: brilliantBlues.light,
+                    borderDash: [5, 5],
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: tooltipPlugin,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Count / Capacity' }
+                    }
+                }
+            }
+        });
+
+        // Security Chart
+        const securityCtx = document.getElementById('securityChart').getContext('2d');
+        new Chart(securityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Data Encryption', ['Application', 'Firewall (WAF)'], 'Network Isolation (VPC)', ['User Access', '& Permissions']],
+                datasets: [{
+                    label: 'Security Focus',
+                    data: [35, 25, 25, 15],
+                    backgroundColor: [brilliantBlues.dark, brilliantBlues.medium, brilliantBlues.light, brilliantBlues.pale],
+                    borderColor: brilliantBlues.background,
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: {
+                        position: 'bottom',
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        // Cost Chart
+        const costCtx = document.getElementById('costChart').getContext('2d');
+        const originalLabels = ['Compute (EC2)', 'Managed Database (RDS)', 'Storage & Transfer (S3/Data)', 'Caching (ElastiCache)', 'Other Services'];
+        new Chart(costCtx, {
+            type: 'doughnut',
+            data: {
+                labels: originalLabels.map(processLabel),
+                datasets: [{
+                    label: 'Monthly Cost',
+                    data: [45, 30, 15, 5, 5],
+                    backgroundColor: [brilliantBlues.dark, brilliantBlues.medium, brilliantBlues.light, brilliantBlues.pale, '#BDBDBD'],
+                     borderColor: brilliantBlues.background,
+                    borderWidth: 4
+                }]
+            },
+             options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: {
+                        position: 'bottom',
+                    },
+                },
+                cutout: '60%'
+            }
+        });
+
+    </script>
+</body>
+</html>
